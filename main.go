@@ -8,6 +8,16 @@ import (
 )
 
 func main() {
+	StartBackendEphimeral()
+}
+
+var started = false
+
+func StartBackendEphimeral() {
+	if started {
+		return
+	}
+	started = true
 	http.HandleFunc("/", startPageHandler)
 	listener, err := net.Listen("tcp", ":0")
 	SocketAddress = fmt.Sprintf("%v", listener.Addr())

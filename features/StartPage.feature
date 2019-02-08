@@ -1,4 +1,4 @@
-@future
+
 Feature: Start Page
 
   Scenario: Start Page is present

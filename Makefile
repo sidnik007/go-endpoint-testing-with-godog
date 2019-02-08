@@ -24,11 +24,11 @@ clean::
 
 
 .PHONY: run
-run:
+run: build
 	./$(BINARY_NAME)
 
 #-include User.mk
-#
-#.PHONY: test
-#test:
-#	go test
+
+.PHONY: build test
+test:
+	go test
